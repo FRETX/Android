@@ -1,0 +1,53 @@
+[
+  {
+      "labels": [
+        "S6 F0", 
+        "S5 F0", 
+        "S4 F0", 
+        "S3 F0", 
+        "S2 F0", 
+        "S1 F0"
+      ],
+      "id": 2,
+      "title": "Open Strings",
+      "video": "bluelights1",
+      "nextId": 3
+  },
+  {
+      "labels": [
+        "S6 F1", 
+        "S5 F2", 
+        "S4 F1", 
+        "S3 F2", 
+        "S2 F1", 
+        "S1 F2"
+      ],
+      "id": 3,
+      "title": "Notes",
+      "video": "redlight",
+      "nextId": 4
+  },
+  {
+      "labels": [
+        "S6 F3", 
+        "S5 F0", 
+        "S5 F2", 
+        "S6 F3", 
+        "S5 F3", 
+        "S4 F2",
+		"S4 F0", 
+		"S5 F2", 
+		"S6 F3", 
+		"S5 F0", 
+		"S5 F2", 
+		"S4 F2",
+		"S5 F3", 
+		"S5 F2", 
+		"S5 F0"
+      ],
+      "id": 4,
+      "title": "Redemption Song",
+      "video": null,
+      "nextId": -1
+  }
+]

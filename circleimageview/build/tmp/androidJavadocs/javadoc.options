@@ -1,0 +1,6 @@
+-classpath 'C:\\Users\\Jamal\\AppData\\Local\\Android\\sdk\\platforms\\android-23\\android.jar'
+-d 'E:\\ANDROID OS_B\\ANDROID STUDIO PROJECTS\\FretXv3.2\\circleimageview\\build\\docs\\javadoc'
+-doctitle 'circleimageview API'
+-quiet 
+-windowtitle 'circleimageview API'
+'E:\\ANDROID OS_B\\ANDROID STUDIO PROJECTS\\FretXv3.2\\circleimageview\\src\\main\\java\\de\\hdodenhof\\circleimageview\\CircleImageView.java'
