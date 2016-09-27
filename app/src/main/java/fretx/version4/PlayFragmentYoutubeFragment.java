@@ -90,11 +90,13 @@ public class PlayFragmentYoutubeFragment extends Fragment{
 
         VIDEO_ID = getArguments().getString("URL");
         SONG_TXT = getArguments().getString("RAW");
+        /*
         if(!(new File(mActivity.getFilesDir().toString() + "/" + SONG_TXT).isFile())) {
             new GetSongChordTxtFile().execute(SONG_TXT);
         }else{
             initTxt(SONG_TXT);
-        }
+        } */
+        new GetSongChordTxtFile().execute(SONG_TXT);
         initUI();
 
         YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();

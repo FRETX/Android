@@ -427,7 +427,7 @@ public final class Util {
     }
 
     public static void stopViaData() {
-        if(Config.bBlueToothActive ==  true) {
+        if(Config.bBlueToothActive) {
             byte[] array = new byte[]{0};
             BluetoothActivity.mHandler.obtainMessage(BluetoothActivity.FRET, array).sendToTarget();
         }

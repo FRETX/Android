@@ -9,82 +9,64 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/**
- * Created by AsmodeusStudio on 29/12/2015.
- */
-public class BluetoothClass {
+class BluetoothClass {
 
     static String tag = "debug";
     static BluetoothSocket mmSocket;
-    static final int SUCCESS_CONNECT = 0;
-    static final int MESSAGE_READ = 1;
-    static final int ARDUINO = 2;
-    static ConnectedThread connectedThread = null;
-    static Handler.Callback callback = new Handler.Callback() {
+
+    private static final int SUCCESS_CONNECT = 0;
+    private static final int MESSAGE_READ = 1;
+    private static final int ARDUINO = 2;
+
+    private static ConnectedThread connectedThread = null;
+
+    static Handler mHandler = new Handler( new Handler.Callback() {
         public boolean handleMessage(Message msg) {
-            Log.i("debug", "in handler");
             switch (msg.what) {
                 case BluetoothClass.SUCCESS_CONNECT:
-                    BluetoothClass.connectedThread = new BluetoothClass.ConnectedThread((BluetoothSocket) msg.obj);
+                    BluetoothClass.connectedThread = new BluetoothClass.ConnectedThread( (BluetoothSocket) msg.obj );
                     break;
                 case BluetoothClass.ARDUINO:
-                    if (Config.bBlueToothActive == true){
-                        BluetoothClass.connectedThread.write((byte[])msg.obj);
-                    }
-                    Log.d("BT",msg.toString());
+                    if ( Config.bBlueToothActive ) { BluetoothClass.connectedThread.write( (byte[]) msg.obj ); }
                     break;
             }
             return false;
         }
-    };
-    static Handler mHandler = new Handler(callback);
+    });
 
-    static public class ConnectedThread extends Thread {
-        //private final BluetoothSocket mmSocket;
+    private static class ConnectedThread extends Thread {
         private final InputStream mmInStream;
         private final OutputStream mmOutStream;
 
-        public ConnectedThread(BluetoothSocket socket) {
-            //mmSocket = socket;
+        ConnectedThread(BluetoothSocket socket) {
             InputStream tmpIn = null;
             OutputStream tmpOut = null;
-            // Get the input and output streams, using temp objects because
-            // member streams are final
-            try {
+
+            try {     // Get the input and output streams, using temp objects because member streams are final
                 tmpIn = socket.getInputStream();
                 tmpOut = socket.getOutputStream();
-            } catch (IOException e) {
-                Log.e(tag, "tmpIn or tmpOut");
-            }
+            }   catch (IOException e) { Log.e(tag, "tmpIn or tmpOut"); }
+
             mmInStream = tmpIn;
             mmOutStream = tmpOut;
         }
 
         public void run() {
             byte[] buffer;  // buffer store for the stream
-            int bytes; // bytes returned from read()
+            int bytes;      // bytes returned from read()
 
-            // Keep listening to the InputStream until an exception occurs
-            while (true) {
+            while (true) {  // Keep listening to the InputStream until an exception occurs
                 try {
-                    // Read from the InputStream
                     buffer = new byte[1024];
                     bytes = mmInStream.read(buffer);
-                    // Send the obtained bytes to the UI activity
-                    mHandler.obtainMessage(MESSAGE_READ, bytes, -1, buffer).sendToTarget();
-                } catch (IOException e) {
-                    break;
-                }
+                    mHandler.obtainMessage(MESSAGE_READ, bytes, -1, buffer).sendToTarget(); // Send the obtained bytes to the UI activity
+                }   catch (IOException e) { break; }
             }
         }
 
-        /* Call this from the main activity to send data to the remote device */
-        public void write(byte[] bytes) {
-            try {
-                mmOutStream.write(bytes);
-            } catch (IOException e) {
-                Log.e(tag, "mmOutStream");
-            }
+        public void write(byte[] bytes) {                           // Call this from the main activity to send data to the remote device
+            try                   { mmOutStream.write(bytes);  }
+            catch (IOException e) { Log.e(tag, "mmOutStream"); }
         }
     }
 }

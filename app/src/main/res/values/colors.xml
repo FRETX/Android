@@ -70,5 +70,6 @@
     <color name="main_color_red_dk">#c62b1f</color>
     <color name="holo_blue">#FF33E5B5</color>
     <color name="green">#2ecc71</color>
+    <color name="tabs_color">#f0f0f0</color>
 
 </resources>
