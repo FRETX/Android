@@ -34,6 +34,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import fretx.version4.amazon.Amazon;
+
 /**
  * DownloadSelectionActivity displays a list of files in the bucket. Users can
  * select a file to download.
@@ -63,7 +65,7 @@ public class DownloadSelectionActivity extends ListActivity {
 
     private void initData() {
         // Gets the default S3 client.
-        s3 = Util.getS3Client(DownloadSelectionActivity.this);
+        s3 = Amazon.getS3Client(DownloadSelectionActivity.this);
         transferRecordMaps = new ArrayList<HashMap<String, Object>>();
     }
 

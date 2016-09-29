@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import fretx.version4.activities.main.MainActivity;
+
 
 public class LearnFragment extends Fragment {
 

@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import fretx.version4.activities.main.MainActivity;
+import fretx.version4.fragments.PlayFragmentYoutubeFragment;
+
 /**
  * Created by ljk on 12/11/2015.
  */

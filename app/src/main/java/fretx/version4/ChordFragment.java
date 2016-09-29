@@ -20,6 +20,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import fretx.version4.activities.main.MainActivity;
+import fretx.version4.bluetooth.BluetoothActivity;
+
 /**
  * Created by Misho on 2/4/2016.
  */

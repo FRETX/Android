@@ -14,8 +14,8 @@
         android:queryHint="@string/searchhidenText"
         android:background="@drawable/search_view_border"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="100dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="50dp" />
 
     <ImageView
         android:layout_width="30dp"
@@ -33,12 +33,12 @@
         android:id="@+id/lvSongList"
         android:visibility="visible"
         android:layout_below="@+id/svSongs"
-        android:numColumns="2"
+        android:numColumns="1"
         android:gravity="center"
-        android:layout_alignLeft="@+id/svSongs"
         android:layout_alignStart="@+id/svSongs"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginRight="@dimen/pad_40dp"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
 </RelativeLayout>

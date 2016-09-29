@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import fretx.version4.fragments.PlayFragment;
+
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT =4;
     private String titles[] ;

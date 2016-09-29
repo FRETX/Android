@@ -14,12 +14,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -28,134 +26,61 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Misho on 2/21/2016.
- */
+import fretx.version4.bluetooth.BluetoothActivity;
+
 public final class Util {
-    private Util() {
+    private Util() { }
+
+    public static String getBeforeComma(String txt) {
+        if(txt == null) return null;
+        return txt.substring(0,txt.indexOf(","));
     }
 
-    // We only need one instance of the clients and credentials provider
-    private static AmazonS3Client sS3Client;
-    private static CognitoCachingCredentialsProvider sCredProvider;
-    private static TransferUtility sTransferUtility;
-
-    /**
-     * Gets an instance of CognitoCachingCredentialsProvider which is
-     * constructed using the given Context.
-     *
-     * @param context An Context instance.
-     * @return A default credential provider.
-     */
-    private static CognitoCachingCredentialsProvider getCredProvider(Context context) {
-        if (sCredProvider == null) {
-            sCredProvider = new CognitoCachingCredentialsProvider(
-                    context.getApplicationContext(),
-                    Constants.COGNITO_POOL_ID,
-                    Regions.EU_WEST_1);
-            //Map<String, String> logins = new HashMap<String, String>();
-            //logins.put("graph.facebook.com", AccessToken.getCurrentAccessToken().getToken());
-            //sCredProvider.setLogins(logins);
-            sCredProvider.refresh();
-        }
-        return sCredProvider;
+    public static String getAfterComma(String txt) {
+        if(txt == null) return null;
+        return txt.substring((txt.indexOf(",")+1), txt.length());
     }
 
-    /**
-     * Gets an instance of a S3 client which is constructed using the given
-     * Context.
-     *
-     * @param context An Context instance.
-     * @return A default S3 client.
-     */
-    public static AmazonS3Client getS3Client(Context context) {
-        if (sS3Client == null) {
-            sS3Client = new AmazonS3Client(getCredProvider(context.getApplicationContext()));
-        }
-        return sS3Client;
+    public static String getMacFromUserFile ( Context context ) {
+        try {
+            String path = context.getFilesDir().toString() + "/" + Constants.USER_INFO_FILE;
+            File userInfoFile = new File(path);
+            if( ! userInfoFile.isFile() ) return Constants.NO_BT_DEVICE;
+            FileReader fr = new FileReader(userInfoFile);
+            BufferedReader br = new BufferedReader(fr);
+            return getAfterComma(br.readLine());
+        }   catch(Exception e) { e.printStackTrace(); return Constants.NO_BT_DEVICE; }
     }
 
-    /**
-     * Gets an instance of the TransferUtility which is constructed using the
-     * given Context
-     *
-     * @param context
-     * @return a TransferUtility instance
-     */
-    public static TransferUtility getTransferUtility(Context context) {
-        if (sTransferUtility == null) {
-            sTransferUtility = new TransferUtility(getS3Client(context.getApplicationContext()),
-                    context.getApplicationContext());
-        }
+    public static String getFolderNameFromAccessFile ( Context context, String MAC ) {
+        try {
+            String path = context.getFilesDir().toString() + "/" + Constants.HW_BUCKET_MAPPING_FILE;
+            File hwAccessFile = new File(path);
+            if( ! hwAccessFile.isFile() ) return Constants.NO_BT_BUCKET;
 
-        return sTransferUtility;
-    }
-
-    /**
-     * Download file from AWS
-     *
-     *
-     * @param context, file
-     * @return void
-     */
-    public static TransferObserver downloadFile(Context context, String bucketName, String fileName) {
-        File file = new File(context.getFilesDir().toString() + "/" + fileName);
-        TransferUtility transferUtility = Util.getTransferUtility(context);
-        // Initiate the download
-        TransferObserver observer = transferUtility.download(bucketName, fileName, file);
-        return observer;
-    }
-
-    public static String checkS3Access(Context context){
-        File hwaccessFile = new File(context.getFilesDir().toString()+ "/" + Constants.HW_BUCKET_MAPPING_FILE);
-        File userInfoFile = new File(context.getFilesDir().toString()+ "/" + Constants.USER_INFO_FILE);
-        String accessFolder = Constants.NO_BT_BUCKET;
-        String macAddress = Constants.NO_BT_DEVICE;
-        if(userInfoFile.isFile()){
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(userInfoFile));
-                if((macAddress = br.readLine()) != null){
-                    macAddress = macAddress.substring((macAddress.indexOf(",")+1), macAddress.length());
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
+            String         line;
+            FileReader     fr = new FileReader(hwAccessFile);
+            BufferedReader br = new BufferedReader(fr);
+            while( ( line = br.readLine() ) != null ) {
+                if( MAC == getBeforeComma(line) ) return getAfterComma(line);
             }
-        }
 
-        if(hwaccessFile.isFile()){
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(hwaccessFile));
-
-                while((accessFolder = br.readLine()) != null){
-                    if(macAddress.equals(accessFolder.substring(0, accessFolder.indexOf(",")))){
-                        accessFolder = accessFolder.substring((accessFolder.indexOf(",")+1), accessFolder.length());
-                        break;
-                    }
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        return accessFolder;
+            return Constants.NO_BT_BUCKET;
+        }   catch ( Exception e ) { e.printStackTrace(); return Constants.NO_BT_BUCKET; }
     }
+
 
     public static int score(int timer){
-        int score = 0;
-        if(timer < 40){
-            score = 5;
-        }else if(timer < 60){
-            score = 4;
-        }else if(timer < 80){
-            score = 3;
-        }else if(timer < 100){
-            score = 2;
-        }else{
-            score = 1;
-        }
+        int score;
+             if (timer < 40)  score = 5;
+        else if (timer < 60)  score = 4;
+        else if (timer < 80)  score = 3;
+        else if (timer < 100) score = 2;
+        else                  score = 1;
         return score;
     }
+
+
 
     /*public static int updateUserHistory(Context context, int currentLesson, int timer) throws IOException {
         try {
@@ -353,28 +278,6 @@ public final class Util {
             }
         }
     }
-
-    public static SongItem setSongItem(String songName, String songUrl, String sontText, Drawable drawable){
-        SongItem itemData = new SongItem();
-        itemData.songName = songName;
-        itemData.songURl = songUrl;
-        itemData.songTxt = sontText;
-        itemData.image = drawable;
-
-        return itemData;
-    }
-
-    public static Drawable LoadImageFromWeb(String url){
-        try{
-            InputStream is = (InputStream) new URL(url).getContent();
-            Drawable d = Drawable.createFromStream(is, "src name");
-            return d;
-        }catch (Exception e) {
-            System.out.println("Exc="+e);
-            return null;
-        }
-    }
-
 
     ///Read the text file from resource(Raw) and divide by end line mark('\n")
     public static String readRawTextFile(Context ctx, String txtFile) {

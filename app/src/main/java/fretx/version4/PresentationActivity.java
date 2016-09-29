@@ -17,6 +17,9 @@ import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
 
 import java.io.File;
 
+import fretx.version4.activities.main.MainActivity;
+import fretx.version4.amazon.Amazon;
+
 /**
  * Created by Misho on 2/4/2016.
  */
@@ -83,7 +86,7 @@ public class PresentationActivity extends Activity
             // Queries files in the bucket from S3.
             File hwaccessFile = new File(PresentationActivity.this.getFilesDir().toString()+ "/" + Constants.HW_BUCKET_MAPPING_FILE);
             if(!hwaccessFile.isFile()) {
-                TransferObserver observer = Util.downloadFile(PresentationActivity.this, Constants.BUCKET_NAME, Constants.HW_BUCKET_MAPPING_FILE);
+                TransferObserver observer = Amazon.downloadFile(PresentationActivity.this, Constants.BUCKET_NAME, Constants.HW_BUCKET_MAPPING_FILE);
                 observer.setTransferListener(new DownloadListener());
                 while (true) {
                     if (TransferState.COMPLETED.equals(observer.getState())

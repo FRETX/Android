@@ -18,6 +18,8 @@ import android.widget.VideoView;
 
 import java.util.Map;
 
+import fretx.version4.activities.main.MainActivity;
+
 public class LearnFragmentEx extends Fragment {
 
     static ObservableVideoView vvMain1;

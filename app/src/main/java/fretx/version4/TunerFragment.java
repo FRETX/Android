@@ -27,6 +27,8 @@ import org.puredata.core.utils.IoUtils;
 import java.io.File;
 import java.io.IOException;
 
+import fretx.version4.activities.main.MainActivity;
+
 
 public class TunerFragment extends Fragment {
 	public static final String TAG = "AndroidTuner";

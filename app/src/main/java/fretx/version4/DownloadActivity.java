@@ -42,6 +42,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import fretx.version4.amazon.Amazon;
+
 /**
  * DownloadActivity displays a list of download records and a bunch of buttons
  * for managing the downloads.
@@ -84,7 +86,7 @@ public class DownloadActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download);
         // Initializes TransferUtility, always do this before using it.
-        transferUtility = Util.getTransferUtility(this);
+        transferUtility = Amazon.getTransferUtility(this);
         checkedIndex = INDEX_NOT_CHECKED;
         transferRecordMaps = new ArrayList<HashMap<String, Object>>();
         initUI();

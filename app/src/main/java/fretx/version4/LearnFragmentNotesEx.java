@@ -33,6 +33,9 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import fretx.version4.activities.main.MainActivity;
+import fretx.version4.bluetooth.BluetoothClass;
+
 
 public class LearnFragmentNotesEx extends Fragment{
 	public static final String TAG = "AndroidTuner";

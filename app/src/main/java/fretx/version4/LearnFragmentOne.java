@@ -14,6 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import fretx.version4.activities.main.MainActivity;
+
 public class LearnFragmentOne extends Fragment {
 
     static ObservableVideoView vvMain1;

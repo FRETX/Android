@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import fretx.version4.activities.main.MainActivity;
+
 public class LearnFragmentDialog extends DialogFragment {
 	public Button btnYes,btnNo,btnRedo;
 	static String DialogBoxTitle;

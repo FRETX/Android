@@ -1,5 +1,7 @@
 package fretx.version4;
 
+import fretx.version4.activities.main.MainActivity;
+
 /**
  * Created by echessa on 7/17/15.
  */
