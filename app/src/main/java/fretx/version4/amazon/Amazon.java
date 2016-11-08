@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
+import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3Client;
@@ -62,5 +63,13 @@ public final class Amazon {
 
     public static File getSongfile(Context context, String name) {
         return new File(context.getFilesDir().toString() + "/" + name);
+    }
+
+    public static Void waitForDownload(TransferObserver observer) {
+        while (true) {
+            TransferState state = observer.getState();
+            if (state == TransferState.COMPLETED) break;
+            if (state == TransferState.FAILED) break;
+        }   return null;
     }
 }

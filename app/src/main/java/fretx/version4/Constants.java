@@ -2,6 +2,8 @@ package fretx.version4;
 
 import java.util.ArrayList;
 
+import fretx.version4.amazon.SongItem;
+
 public class Constants {
 
 

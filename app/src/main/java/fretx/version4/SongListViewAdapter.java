@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import fretx.version4.activities.main.MainActivity;
+import fretx.version4.amazon.SongItem;
 import fretx.version4.fragments.PlayFragmentYoutubeFragment;
 
 /**

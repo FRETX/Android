@@ -36,12 +36,11 @@ import java.util.UUID;
 
 import fretx.version4.Config;
 import fretx.version4.R;
+import fretx.version4.callbacks.Callbacks;
 
 public class BluetoothActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     ArrayAdapter<String> listAdapter;
-    ListView listView;
-    BluetoothAdapter btAdapter;
 
     List<BluetoothDevice> deviceList;
     private DeviceAdapter deviceAdapter;
@@ -69,8 +68,11 @@ public class BluetoothActivity extends AppCompatActivity implements AdapterView.
     @Override protected void onResume() {
         super.onResume();
         Initialize();
-        if(btAdapter == null){ Toast.makeText(getApplicationContext(), "No Bluetooth on your phone!", Toast.LENGTH_SHORT).show(); }
-        else { if(!btAdapter.isEnabled()){ turnOnBT(); } btAdapter.startLeScan(mLeScanCallback); }
+        if( ! Bluetooth.isSupported ) { Toast.makeText(getApplicationContext(), "No Bluetooth on your phone!", Toast.LENGTH_SHORT).show(); return; }
+        if( ! Bluetooth.isEnabled   ) { Bluetooth.Enable(this); }
+
+        Toast.makeText(getApplicationContext(), "Starting Scan!", Toast.LENGTH_SHORT).show();
+        Bluetooth.adapter.startLeScan(mLeScanCallback);
     }
 
     @Override protected void onPause() {
@@ -79,8 +81,6 @@ public class BluetoothActivity extends AppCompatActivity implements AdapterView.
     }
 
     @Override public void onBackPressed() { }
-
-
 
     private void setupUI() {
         setContentView(R.layout.bluetooth_activity);
@@ -91,28 +91,27 @@ public class BluetoothActivity extends AppCompatActivity implements AdapterView.
         Button backBtn = (Button) findViewById(R.id.btGoBack);
         backBtn.setOnClickListener( new View.OnClickListener() {
             @Override public void onClick(View v) {
-                btAdapter.stopLeScan(mLeScanCallback);
+                Bluetooth.adapter.stopLeScan(mLeScanCallback);
                 finish();
             }
         });
     }
 
     private void Initialize() {
-        deviceList = new ArrayList<>();
+        deviceList    = new ArrayList<>();
         devRssiValues = new HashMap<>();
         deviceAdapter = new DeviceAdapter(this, deviceList);
 
         ListView newDevicesListView = (ListView) findViewById(R.id.listView);
         newDevicesListView.setAdapter(deviceAdapter);
         newDevicesListView.setOnItemClickListener(mDeviceClickListener);
-
-        btAdapter = BluetoothAdapter.getDefaultAdapter();
     }
 
     private void turnOnBT() {
         Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
         startActivityForResult(intent, 0);
     }
+
 
     private void addDevice(BluetoothDevice device, int rssi) {
         boolean deviceFound = false;
@@ -132,20 +131,24 @@ public class BluetoothActivity extends AppCompatActivity implements AdapterView.
     private BluetoothAdapter.LeScanCallback mLeScanCallback = new BluetoothAdapter.LeScanCallback() {
 
         @Override public void onLeScan(final BluetoothDevice device, final int rssi, byte[] scanRecord) {
+            addDevice(device,rssi);
+            /*
             runOnUiThread( new Runnable() {
                 @Override public void run() {
-                    /*
+                    Toast.makeText(getApplicationContext(), "Device Found" + device, Toast.LENGTH_SHORT).show();
+
                     if(device.getName().equals(Name)) {
-                        btAdapter.stopLeScan(mLeScanCallback);
+                        Bluetooth.adapter.stopLeScan(mLeScanCallback);
                         listAdapter.add("Device Found");
                         fretx = device;
                         listAdapter.add("Connecting...");
                         mBluetoothGatt = fretx.connectGatt(getApplicationContext(), false, mGattCallback);
                         Config.bBlueToothActive = true;
-                    }*/
+                    }
+
                     addDevice(device,rssi);
                 }
-            });
+            });*/
         }
     };
 
@@ -154,7 +157,7 @@ public class BluetoothActivity extends AppCompatActivity implements AdapterView.
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             BluetoothDevice device = deviceList.get(position);
-            btAdapter.stopLeScan(mLeScanCallback);
+            Bluetooth.adapter.stopLeScan(mLeScanCallback);
 
             fretx = device;
             mBluetoothGatt = fretx.connectGatt(getApplicationContext(), false, mGattCallback);
@@ -260,6 +263,10 @@ public class BluetoothActivity extends AppCompatActivity implements AdapterView.
 
             return vg;
         }
+    }
+
+    protected void onActivityResult(int request, int result, Intent data) {
+        Callbacks.onActivityResult(request, result, data);
     }
 }
 

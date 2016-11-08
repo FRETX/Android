@@ -1,6 +1,11 @@
 package fretx.version4.activities.main;
 
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothProfile;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 
 import android.os.Bundle;
@@ -11,15 +16,22 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.List;
+
+import fretx.version4.bluetooth.Bluetooth;
 import fretx.version4.bluetooth.BluetoothActivity;
 import fretx.version4.Config;
 import fretx.version4.LearnFragmentButton;
+import fretx.version4.bluetooth.BluetoothScanTask;
 import fretx.version4.fragments.PlayFragmentSearchList;
 import fretx.version4.R;
 import fretx.version4.SlidingTabLayout;
 import fretx.version4.Util;
 import fretx.version4.ViewPagerAdapter;
+
+import static android.R.attr.action;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -34,6 +46,12 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         fragMgr = getSupportFragmentManager();
         setupUI();
+        Bluetooth.Initialize();
+        Context ctx = this;
+        Bluetooth.Enable(this);
+        getApplicationContext().registerReceiver(btReceiver, new IntentFilter(BluetoothDevice.ACTION_ACL_CONNECTED));
+        getApplicationContext().registerReceiver(btReceiver, new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED));
+        new BluetoothScanTask(this).execute();
     }
 
     @Override
@@ -65,7 +83,7 @@ public class MainActivity extends AppCompatActivity
 
     private ViewPager setupViewPager() {
         ViewPager pager;
-        String titles[] = new String[]{ "Play", "Learn", "Chords", "Tuner"};
+        String titles[] = new String[]{ "    Play", "    Learn", "    Chords", "    Tuner"};
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(fragMgr, titles);
         pager = (ViewPager) findViewById(R.id.viewpager);
         pager.setAdapter(viewPagerAdapter);
@@ -112,17 +130,18 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void showConnectionState() {
-        if (Config.bBlueToothActive){
-            btState.setText(R.string.connect);
-            btState.setBackgroundColor(Color.GREEN);
-        }
-        else {
-            btState.setText(R.string.disconnect);
-            btState.setBackgroundColor(Color.RED);
-        }
+        runOnUiThread(new Runnable() {
+            @Override public void run() {
+                if (Bluetooth.isConnected) {
+                    btState.setText("CONNECTED");
+                    btState.setBackgroundColor(Color.GREEN);
+                } else {
+                    btState.setText("NOT CONNECTED");
+                    btState.setBackgroundColor(Color.RED);
+                }
+            }
+        });
     }
-
-
 
     public void changeFragments(int position){
         if (position == 2 || position == 0){
@@ -131,5 +150,17 @@ public class MainActivity extends AppCompatActivity
             transaction.commit();
         }
     }
+
+    private final BroadcastReceiver btReceiver = new BroadcastReceiver() {
+        @Override public void onReceive(Context context, Intent intent) {
+            if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
+                Toast.makeText(getApplicationContext(), "Device Connected", Toast.LENGTH_SHORT).show();
+            }
+            else if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
+                Toast.makeText(getApplicationContext(), "Device Disconnected", Toast.LENGTH_SHORT).show();
+            }
+            showConnectionState();
+        }
+    };
 
 }

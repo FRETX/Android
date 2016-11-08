@@ -35,6 +35,7 @@ import fretx.version4.Util;
 import fretx.version4.activities.main.MainActivity;
 import fretx.version4.amazon.Amazon;
 import fretx.version4.amazon.GetSongfileTask;
+import fretx.version4.bluetooth.Bluetooth;
 import fretx.version4.bluetooth.BluetoothClass;
 
 
@@ -352,7 +353,7 @@ public class PlayFragmentYoutubeFragment extends Fragment {
 
             mbPlaying = false;
 
-            //Util.stopViaData();
+            Bluetooth.clear();
 
             bStartCheckFlag = false;        ///Flag that current time is passed start time.
 
@@ -441,7 +442,7 @@ public class PlayFragmentYoutubeFragment extends Fragment {
         }
 
         public void run() {
-            try { Util.startViaData(array); }      // Connect the device through the socket. This will block
+            try { Log.v("debug",new String(array)); Bluetooth.send(array); }      // Connect the device through the socket. This will block
             catch (Exception connectException) {    // Unable to connect; close the socket and get out
                 Log.i(BluetoothClass.tag, "connect failed");
                 try   { BluetoothClass.mmSocket.close(); }

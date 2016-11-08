@@ -2,20 +2,22 @@
 <items version="2" >
 
     <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/poi-3.7-beta1.jar"
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="79df8ada819115ec84c5b1fb44ad11e371daafee">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/poi-3.7-beta1_aff107a43473b8b1cdbbd73aaacec6f083800ca9/classes.dex" />
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.volley-volley-1.0.0_6dfd841f14b44267e6d688f55d897d1b8078de07/classes.dex" />
     </item>
     <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/google-http-client-jackson2-1.16.0-rc.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="4e8619928dedd7423daa2661d90d4eb113cf99f1">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_da174f60ff5fd5dfb60691bc4a689da0d9aa8a1e/classes.dex" />
+        sha1="ee1018f19d8fb8c775b603bc40588d637fce886e">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-http-client-jackson2-1.16.0-rc_9b1b5e6f4b63a702692a0bc84982f4dbe13a605b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -36,14 +38,6 @@
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/additionnal_716bea41f6e7b5b1e08bcd2a22b778dcaf851968/classes.dex" />
     </item>
     <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-api-client-1.20.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d3e66209ae9e749b2d6833761e7885f60f285564">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-client-1.20.0_0df19972aeddc556f0188f4ec5e608dff0a75da0/classes.dex" />
-    </item>
-    <item
         is-multidex="true"
         jar="/home/bklein/Documents/FretX Android/app/libs/google-api-client-extensions-1.6.0-beta.jar"
         jumboMode="true"
@@ -51,6 +45,15 @@
         revision="24.0.2"
         sha1="cb2794578fbed437afc8880f4acb78d38b982bad">
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-client-extensions-1.6.0-beta_324a01656527fb075bdfbfb7386caf2dfd94eb7c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/com.fasterxml.jackson.core.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6575afa4a9b3dc94dec2fa6082847e6987de651c">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/com.fasterxml.jackson.core_85d21a1d4c6b6e3197065e2986458e48fe603adb/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -71,28 +74,12 @@
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/aws-android-sdk-s3-2.2.13_c909035171a4590c92c0287160e87ec14f527b18/classes.dex" />
     </item>
     <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_cf6ecca762c1ee69e99dce841b90a1e8c059e790/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/aws-android-sdk-core-2.2.13.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="de0d856f2bc4cba9e9e8c348e267f22910a3c779">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/aws-android-sdk-core-2.2.13_836ff849e7010804c3258b908f0f7a9d6e242724/classes.dex" />
-    </item>
-    <item
         is-multidex="true"
         jar="/home/bklein/Documents/FretX Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="83afbf8ddae46ddcd874353ef9da84244a6863b2">
+        sha1="712179049ae3b5ce8e915fe498e7a68c2fdc0425">
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d1d783b9b8c24bbb8c2588fdeb40f11b07b28b79/classes.dex" />
     </item>
     <item
@@ -105,30 +92,6 @@
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.1.1_83f93b0cdc99f10772ff49cd065b62708cdbf8cd/classes.dex" />
     </item>
     <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.1_0b2513a2e094833b0186817a37c13c0cde85f6bb/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-api-client-extensions-1.6.0-beta.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="cb2794578fbed437afc8880f4acb78d38b982bad">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-client-extensions-1.6.0-beta_324a01656527fb075bdfbfb7386caf2dfd94eb7c/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_c801939242bd3cc430dcaaf6b18507632dfa8ffc/classes.dex" />
-    </item>
-    <item
         is-multidex="true"
         jar="/home/bklein/Documents/FretX Android/app/libs/ypylibs.jar"
         jumboMode="true"
@@ -147,252 +110,6 @@
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.noisepages.nettoyeur-midi-1.0.0-rc1_24b9f2b5911876f3d990898e7ace5aa086cb50a8/classes.dex" />
     </item>
     <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="f2de058bdf780ed54585c42f3aaf9e4291bbc530">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d1d783b9b8c24bbb8c2588fdeb40f11b07b28b79/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_184158632acd249e582cb5071cf0813202740374/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-http-client-1.20.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="93d82db2bca534960253f43424b2ba9d7638b4d2">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-http-client-1.20.0_e7dbf0bede16575b427d08c012045e0648440d1c/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_5eb7cafee13df4ce410895af80313e1332c06f00/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-api-client-1.20.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d3e66209ae9e749b2d6833761e7885f60f285564">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-client-1.20.0_0df19972aeddc556f0188f4ec5e608dff0a75da0/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/additionnal.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/additionnal_716bea41f6e7b5b1e08bcd2a22b778dcaf851968/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/universal-image-loader-1.9.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.3_7c935356338a751663a465709b7987727d931324/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/jtransforms-2.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9e52124b670340d47844a734e36765c3bc11b7f3">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/jtransforms-2.4_05b554651682b0f47a2e25fe71cea5ee11e39304/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/aws-android-sdk-core-2.2.13.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="de0d856f2bc4cba9e9e8c348e267f22910a3c779">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/aws-android-sdk-core-2.2.13_836ff849e7010804c3258b908f0f7a9d6e242724/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_184158632acd249e582cb5071cf0813202740374/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/com.fasterxml.jackson.core.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="6575afa4a9b3dc94dec2fa6082847e6987de651c">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/com.fasterxml.jackson.core_85d21a1d4c6b6e3197065e2986458e48fe603adb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-oauth-client-1.16.0-rc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e0f006ada6da03657ab8cc871f90de8eeab37e14">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-oauth-client-1.16.0-rc_b221c9c1bfadc5917c19d8591ba671904646dd25/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/aws-android-sdk-s3-2.2.13.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="88aedffb7bb0474b63d5a77b5e94e4cf653b848a">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/aws-android-sdk-s3-2.2.13_c909035171a4590c92c0287160e87ec14f527b18/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/mail.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="428e267abff0d10802ccde86b915da2c20471160">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/mail_5a42a44bb7319229b119bb9386b670545f22d5f9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-api-services-youtube-v3-rev68-1.16.0-rc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="06157d1a5f6f604a6f4363988252d0c697fa1e6f">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-services-youtube-v3-rev68-1.16.0-rc_47f35fad1ff458a57ad8b64935a456ae03ed11b1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/poi-3.7-beta1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="79df8ada819115ec84c5b1fb44ad11e371daafee">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/poi-3.7-beta1_aff107a43473b8b1cdbbd73aaacec6f083800ca9/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.noisepages.nettoyeur/midi/1.0.0-rc1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a35b73ff5c4ab6af57b21c03b9b3aa234d816a7f">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.noisepages.nettoyeur-midi-1.0.0-rc1_24b9f2b5911876f3d990898e7ace5aa086cb50a8/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-api-services-youtube-v3-rev68-1.16.0-rc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="06157d1a5f6f604a6f4363988252d0c697fa1e6f">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-services-youtube-v3-rev68-1.16.0-rc_47f35fad1ff458a57ad8b64935a456ae03ed11b1/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-http-client-1.20.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="93d82db2bca534960253f43424b2ba9d7638b4d2">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-http-client-1.20.0_e7dbf0bede16575b427d08c012045e0648440d1c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_cf6ecca762c1ee69e99dce841b90a1e8c059e790/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/universal-image-loader-1.9.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.3_7c935356338a751663a465709b7987727d931324/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/ypylibs.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a810862bb1657c7f890e24f12268ecd210ad62dc">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/ypylibs_94ef1ec6efd423e60852fd7e7e124bc2ff5c15c6/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/mail.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="428e267abff0d10802ccde86b915da2c20471160">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/mail_5a42a44bb7319229b119bb9386b670545f22d5f9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.volley-volley-1.0.0_6dfd841f14b44267e6d688f55d897d1b8078de07/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-http-client-jackson2-1.16.0-rc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ee1018f19d8fb8c775b603bc40588d637fce886e">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-http-client-jackson2-1.16.0-rc_9b1b5e6f4b63a702692a0bc84982f4dbe13a605b/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/activation.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/activation_ed81e14ecd32f01dffe3499af7258fb81c64a0b9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/bklein/Documents/FretX Android/app/libs/com.fasterxml.jackson.core.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="6575afa4a9b3dc94dec2fa6082847e6987de651c">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/com.fasterxml.jackson.core_85d21a1d4c6b6e3197065e2986458e48fe603adb/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-oauth-client-1.16.0-rc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e0f006ada6da03657ab8cc871f90de8eeab37e14">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-oauth-client-1.16.0-rc_b221c9c1bfadc5917c19d8591ba671904646dd25/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.6.0_46c82a099003909897712216bee1fec52d0ce5c0/classes.dex" />
-    </item>
-    <item
         is-multidex="true"
         jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/jars/classes.jar"
         jumboMode="true"
@@ -400,38 +117,6 @@
         revision="24.0.2"
         sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.6.0_46c82a099003909897712216bee1fec52d0ce5c0/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_914b8c27bc0dc81a4a14a5ca10c2f3a9b4f0bb79/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/aws-android-sdk-cognito-2.2.13.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9603a4ca9f0eedbca41ea1a371e5d76d447fbc56">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/aws-android-sdk-cognito-2.2.13_ff61d8ab9135abb76edcb651cea3a5a151a56721/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/jtransforms-2.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9e52124b670340d47844a734e36765c3bc11b7f3">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/jtransforms-2.4_05b554651682b0f47a2e25fe71cea5ee11e39304/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-http-client-jackson2-1.16.0-rc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ee1018f19d8fb8c775b603bc40588d637fce886e">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-http-client-jackson2-1.16.0-rc_9b1b5e6f4b63a702692a0bc84982f4dbe13a605b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -441,6 +126,24 @@
         revision="24.0.2"
         sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/YouTubeAndroidPlayerApi_d559f9c353a24f223129ea4f012907478292802a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/google-http-client-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="93d82db2bca534960253f43424b2ba9d7638b4d2">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-http-client-1.20.0_e7dbf0bede16575b427d08c012045e0648440d1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/google-api-client-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d3e66209ae9e749b2d6833761e7885f60f285564">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-client-1.20.0_0df19972aeddc556f0188f4ec5e608dff0a75da0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -461,12 +164,31 @@
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-oauth-client-java6-1.16.0-rc_5db7df219b6f890922085b1df9c404f683a2ad58/classes.dex" />
     </item>
     <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-api-client-servlet-1.20.0.jar"
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/universal-image-loader-1.9.3.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="bf6356592e9d127056404cc927ede6f3044e68fb">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-client-servlet-1.20.0_7d06c1e702ffd3528ab42516ea8efaabe12ca2e1/classes.dex" />
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.3_7c935356338a751663a465709b7987727d931324/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/jtransforms-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9e52124b670340d47844a734e36765c3bc11b7f3">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/jtransforms-2.4_05b554651682b0f47a2e25fe71cea5ee11e39304/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/aws-android-sdk-core-2.2.13.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="de0d856f2bc4cba9e9e8c348e267f22910a3c779">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/aws-android-sdk-core-2.2.13_836ff849e7010804c3258b908f0f7a9d6e242724/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -488,20 +210,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_184158632acd249e582cb5071cf0813202740374/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/google-oauth-client-1.16.0-rc.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e0f006ada6da03657ab8cc871f90de8eeab37e14">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-oauth-client-1.16.0-rc_b221c9c1bfadc5917c19d8591ba671904646dd25/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/mail.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="428e267abff0d10802ccde86b915da2c20471160">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/mail_5a42a44bb7319229b119bb9386b670545f22d5f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/bklein/Documents/FretX Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="42dbdac35455e08bb0e24e4d7aa4bbe437e95632">
+        sha1="934da4477a264ca9f4789869fb72face8fa4c778">
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_da174f60ff5fd5dfb60691bc4a689da0d9aa8a1e/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-oauth-client-jetty-1.16.0-rc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="51082d2052595070c61ad229aa166670fe02598a">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-oauth-client-jetty-1.16.0-rc_6464fea5c223e114dadcee5a0056adcba1c17ede/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -513,12 +254,22 @@
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.1_0b2513a2e094833b0186817a37c13c0cde85f6bb/classes.dex" />
     </item>
     <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/org.puredata.android/pd-core/1.0.1/jars/classes.jar"
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/google-api-services-youtube-v3-rev68-1.16.0-rc.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="4548682baf5832064d7ba9c90356ccbfe1640cc9">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/org.puredata.android-pd-core-1.0.1_7dc52c8716c8673b46b19c8ccf97642c14fac203/classes.dex" />
+        sha1="06157d1a5f6f604a6f4363988252d0c697fa1e6f">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-services-youtube-v3-rev68-1.16.0-rc_47f35fad1ff458a57ad8b64935a456ae03ed11b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/libs/poi-3.7-beta1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="79df8ada819115ec84c5b1fb44ad11e371daafee">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/poi-3.7-beta1_aff107a43473b8b1cdbbd73aaacec6f083800ca9/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -530,14 +281,6 @@
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/aws-android-sdk-cognito-2.2.13_ff61d8ab9135abb76edcb651cea3a5a151a56721/classes.dex" />
     </item>
     <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/YouTubeAndroidPlayerApi.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/YouTubeAndroidPlayerApi_d559f9c353a24f223129ea4f012907478292802a/classes.dex" />
-    </item>
-    <item
         is-multidex="true"
         jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/org.puredata.android/pd-core/1.0.1/jars/classes.jar"
         jumboMode="true"
@@ -548,28 +291,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_cf6ecca762c1ee69e99dce841b90a1e8c059e790/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/bklein/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
         <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_2f71528e480c7077984c422e90a4cc89bdea6d42/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/libs/google-oauth-client-java6-1.16.0-rc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="6b96c0bde14c8256b047f97d0b3aca58ad91cd6d">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-oauth-client-java6-1.16.0-rc_5db7df219b6f890922085b1df9c404f683a2ad58/classes.dex" />
-    </item>
-    <item
-        jar="/home/bklein/Documents/FretX Android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/home/bklein/Documents/FretX Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.1.1_83f93b0cdc99f10772ff49cd065b62708cdbf8cd/classes.dex" />
     </item>
     <item
         is-multidex="true"

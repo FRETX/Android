@@ -35,10 +35,10 @@
         android:layout_below="@+id/svSongs"
         android:numColumns="1"
         android:gravity="center"
-        android:layout_alignStart="@+id/svSongs"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginEnd="10dp"
+        android:verticalSpacing="@dimen/pad_5dp"
+        android:layout_alignStart="@+id/svSongs" />
 
 </RelativeLayout>
